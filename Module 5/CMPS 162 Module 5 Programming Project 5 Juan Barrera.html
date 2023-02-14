@@ -1,0 +1,132 @@
+Class Notes
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 5 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//--------//
+// Events //
+//--------//
+console.log("Events");
+
+// 1. Change the link (the <a> tag) in the HTML body below such that a hello
+//    message is displayed on a click event.
+
+<body>
+  <a href="#" onclick="alert('Hello!')">Click me</a>
+</body>
+
+console.log("Input Fields");
+
+// 1. Change the background color to red for the input text field (the <input>
+//    tag) in the HTML body when obtaining the focus and change it back to
+//    white when the focus is lost.
+ /// 
+ <body>
+  <input type="text" onfocus="this.style.backgroundColor = 'red'" onblur="this.style.backgroundColor = 'white'"/>
+</body>
+/
+
+// 2. Read the content of the input field (the <input> tag) when the focus is
+//    lost and alert it to the user.
+
+<body>
+  <input type="text" id="Input" onblur="alert(document.getElementById('Input').value)" />
+</body>
+
+
+
+//------------//
+// Paragraphs //
+//------------//
+console.log("Paragraphs");
+
+// 1. Write JavaScript code that changes the text in the paragraph below
+//    (the <p> tag) from "Hello World!" to "Goodbye World!".
+ /
+ <p id="myParagraph">Hello World!</p>
+
+<script>
+  document.getElementById("Paragraph").innerHTML = "Goodbye World!";
+</script> 
+
+
+
+
+//--------//
+// Images //
+//--------//
+console.log("Images");
+Add an image to the HTML body (use the <img> tag). Make it disappear when
+//    someone clicks on it
+// 1. .
+function hide(){
+    document.getElementById('cutch').className = "hidden";
+}
+
+<html>
+    <head>
+        <script type="text/javascript" src="./js/hideimage.js"></script>
+        <style> .hidden {display:none;}</style>
+
+    </head>
+    <body>
+        <img src="./direcciondeimagen.jpg" height="350" widht="350" id="cutch" onclick="hide();">
+    </body>
+</html>
+
+
+
+//--------//
+// Styles //
+//--------//
+console.log("Styles");
+
+// 1. Use the style of div1 and div2 to swap the colors of the divs.
+<body>
+  <div id="div1" style="background-color: blue; height: 100px; width: 100px;"></div>
+  <div id="div2" style="background-color: red; height: 100px; width: 100px;"></div>
+
+  <script>
+    const div1 = document.querySelector("#div1");
+    const div2 = document.querySelector("#div2");
+
+    div1.addEventListener("click", function() {
+      const div1BackgroundColor = div1.style.backgroundColor;
+      div1.style.backgroundColor = div2.style.backgroundColor;
+      div2.style.backgroundColor = div1BackgroundColor;
+    });
+
+    div2.addEventListener("click", function() {
+      const div2BackgroundColor = div2.style.backgroundColor;
+      div2.style.backgroundColor = div1.style.backgroundColor;
+      div1.style.backgroundColor = div2BackgroundColor;
+    });
+  </script>
+</body>
+
+
+
+
+</script>
+</head>
+<body>
+  See console!<br><br>
+  <a>Click here for a greeting!</a><br><br>
+  <input type="text"><br><br>
+  <p>Hello World!</p>
+  <div id="div1"
+       style="background-color:yellow;"
+       onclick="swapColors();">
+    Hello
+  </div>
+  <div id="div2"
+       style="background-color:green;"
+       onclick="swapColors();">
+    World
+  </div>
+</body>
+</html>
