@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TV Shows</title>
+  </head>
+  <body>
+    <script>
+      const tvShows = {
+        title: "The Lord Of The Rings",
+        genre: "Fantasy",
+        network: "HBO Max",
+        rating: 8.8,
+        Movies: 3,
+        mainCharacters: ["Frodo Baggins", "Gandalf", "Aragorn","Legolas","Gollum"],
+        plot: "The Lord of the Rings is a classic fantasy epic about a young hobbit named Frodo who is entrusted with the task of destroying a powerful and evil ring. Along with a fellowship of diverse companions, including humans, dwarves, and elves, Frodo must navigate dangerous territories and battle terrifying creatures in order to save Middle-earth from the clutches of darkness.But the journey is long and perilous, and the ring's corrupting influence threatens to consume Frodo and his allies. Will they succeed in their quest, or will the forces of darkness triumph and plunge the world into eternal shadow?",
+        awards: [" a total of 17 Academy Awards, including Best Picture, Best Director,and Best Adapted Screenplay", "four Golden Globe Awards and also The Return of the King set a record by winning all eleven categories it was nominated for at the 76th Academy Awards, including Best Picture"],
+        premiereDate: new Date("2001-12-19"),
+        image: "https://cdn.wallpapersafari.com/70/69/JhB6yH.jpg"
+      };
+
+      const story = `
+        <h1>${tvShows.title}</h1>
+        <img src="${tvShows.image}" alt="${tvShows.title}" width="500" height="250">
+        <p>${tvShows.plot}</p>
+        <p>The show premiered on ${tvShows.premiereDate.toDateString()} and it has ${tvShows.Movies} movies. It can be watched ${tvShows.network} and had a rating of ${tvShows.rating}.</p>
+        <p>The main characters of the show were ${tvShows.mainCharacters.join(", ")}. The show won several awards, including ${tvShows.awards.join(", ")}.</p>
+      `;
+
+      document.body.innerHTML = story;
+    </script>
+  </body>
+</html>

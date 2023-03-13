@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cheetah - Animals of Earth</title>
+  </head>
+  <body>
+    <h1>Animals of Earth</h1>
+    <ul id="animal-list">
+    </ul>
+    
+    <script>
+      //These are the objects for the cheeah
+      const cheetah = {
+        name: 'Cheetah',
+        species: 'Acinonyx jubatus',
+        habitat: 'Africa and some parts of Iran',
+        diet: 'Carnivore',
+        lifespan: '10-12 years in the wild',
+        speed: '70-75 mph',
+        weight: '75-140 lbs',
+        height: '2.5-3 feet at the shoulder',
+        gestation: '90-95 days',
+        conservationStatus: 'Vulnerable',
+        image: 'https://www.thoughtco.com/thmb/VOFTSp8g3fh7qN4SiQxQNeSupFo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/front-view-of-a-female-cheetah--acinonyx-jubatus--running-73553651-5c62c0a2c9e77c0001566d2a.jpg'
+      };
+      
+       
+      
+      // The following displays a description about the cheetah
+      const story = document.createElement('p');
+      story.innerHTML = `The cheetah is a fascinating animal known for its incredible speed and agility. It is the fastest land animal in the world, capable of reaching speeds of up to ${cheetah.speed}. Cheetahs are found in Africa and some parts of Iran, where they live in a variety of habitats including grasslands, savannas, and semi-deserts. They are carnivores and primarily hunt small to medium-sized ungulates. Cheetahs have a relatively short lifespan of ${cheetah.lifespan} and are considered vulnerable due to habitat loss and poaching. Let's learn more about this amazing animal!<br><br><img src="${cheetah.image}" alt="${cheetah.name}" width="500">`;
+      document.body.appendChild(story);
+      
+      
+      // display cheetah properties
+      const cheetahList = document.getElementById('animal-list');
+      const cheetahListItem = document.createElement('li');
+      
+      // add animal name as heading
+      const heading = document.createElement('h2');
+      heading.textContent = cheetah.name;
+      cheetahListItem.appendChild(heading);
+      
+      
+      
+      cheetahList.appendChild(cheetahListItem);
+    </script>
+  </body>
+</html>
