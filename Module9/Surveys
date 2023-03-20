@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form Example Module 9 Juan Barrera</title>
+</head>
+<body>
+	<h2>Login Form JB</h2>
+	<form>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" minlength="8" required>
+		<br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" minlength="12" required>
+		<br>
+		<input type="submit" value="Login">
+	</form>
+</body>
+
+
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form JB</title>
+	<style>
+		.required-field:invalid:not(:focus) {
+			background-color: yellow;
+		}
+        #address1:invalid,
+		#address2:invalid {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<h2>Survey Form JB</h2>
+	<form>
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" required>
+		<br>
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" required>
+		<br>
+		<label for="address1">Address 1:</label>
+		<input type="text" id="address1" name="address1" class="required-field" required>
+		<br>
+		<label for="address2">Address 2:</label>
+		<input type="text" id="address2" name="address2" class="required-field" required>
+		<br>
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city" pattern="[A-Za-z]+" required>
+		<br>
+		<label for="state">State:</label>
+		<input type="text" id="state" name="state" pattern="[A-Za-z]{2}" maxlength="2" required>
+		<br>
+		<label for="zipCode">Zip Code:</label>
+		<input type="text" id="zipCode" name="zipCode" pattern="[0-9]{5}" maxlength="5" required>
+		<br>
+		<label for="coffeePlace">What is your favorite coffee place in Pittsburgh?</label>
+		<input type="text" id="coffeePlace" name="coffeePlace" class="required-field" required>
+		<br>
+		<label for="lunchSpot">What is your favorite lunch spot in Pittsburgh?</label>
+		<input type="text" id="lunchSpot" name="lunchSpot" class="required-field" required>
+		<br>
+		<label for="favCity">What is your favorite city to visit outside of Pittsburgh?</label>
+		<input type="text" id="favCity" name="favCity" class="required-field" required>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
